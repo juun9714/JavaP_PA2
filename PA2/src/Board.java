@@ -303,33 +303,141 @@ public class Board {
 				//Pawn
 				if(wPawns.get(1).getX()==i && wPawns.get(1).getY()==j) {
 					System.out.println("wP_1");
+					wPawns.get(1).setTarget('o');
+					if(chessBoard[i-1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='b') {
+						//바로 앞에 enemy(black)
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='b') {
+						chessBoard[i-1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='b') {
+						chessBoard[i-1][j-1][2]='*';
+					}
 				}else if(wPawns.get(2).getX()==i && wPawns.get(2).getY()==j) {
 					System.out.println("wP_2");
+					wPawns.get(2).setTarget('o');
+					if(chessBoard[i-1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='b') {
+						//바로 앞에 enemy(black)
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='b') {
+						chessBoard[i-1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='b') {
+						chessBoard[i-1][j-1][2]='*';
+					}
 				}else if(wPawns.get(3).getX()==i && wPawns.get(3).getY()==j) {
 					System.out.println("wP_3");
+					wPawns.get(3).setTarget('o');
+					if(chessBoard[i-1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='b') {
+						//바로 앞에 enemy(black)
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='b') {
+						chessBoard[i-1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='b') {
+						chessBoard[i-1][j-1][2]='*';
+					}
 				}else if(wPawns.get(4).getX()==i && wPawns.get(4).getY()==j) {
 					System.out.println("wP_4");
+					wPawns.get(4).setTarget('o');
+					if(chessBoard[i-1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='b') {
+						//바로 앞에 enemy(black)
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='b') {
+						chessBoard[i-1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='b') {
+						chessBoard[i-1][j-1][2]='*';
+					}
 				}else if(wPawns.get(5).getX()==i && wPawns.get(5).getY()==j) {
 					System.out.println("wP_5");
+					wPawns.get(5).setTarget('o');
+					if(chessBoard[i-1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='b') {
+						//바로 앞에 enemy(black)
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='b') {
+						chessBoard[i-1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='b') {
+						chessBoard[i-1][j-1][2]='*';
+					}
 				}else if(wPawns.get(6).getX()==i && wPawns.get(6).getY()==j) {
 					System.out.println("wP_6");
+					wPawns.get(6).setTarget('o');
+					if(chessBoard[i-1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='b') {
+						//바로 앞에 enemy(black)
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='b') {
+						chessBoard[i-1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='b') {
+						chessBoard[i-1][j-1][2]='*';
+					}
 				}else if(wPawns.get(7).getX()==i && wPawns.get(7).getY()==j) {
 					System.out.println("wP_7");
+					wPawns.get(7).setTarget('o');
+					if(chessBoard[i-1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='b') {
+						//바로 앞에 enemy(black)
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='b') {
+						chessBoard[i-1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='b') {
+						chessBoard[i-1][j-1][2]='*';
+					}
 				}else if(wPawns.get(8).getX()==i && wPawns.get(8).getY()==j) {
 					System.out.println("wP_8");
+					wPawns.get(8).setTarget('o');
+					if(chessBoard[i-1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='b') {
+						//바로 앞에 enemy(black)
+						chessBoard[i-1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='b') {
+						chessBoard[i-1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='b') {
+						chessBoard[i-1][j-1][2]='*';
+					}
 				}
 			}
 		}else if(chessBoard[i][j][0]=='b') {
 			//black
 			if(chessBoard[i][j][1]=='R') {
 				//Rook
-				System.out.println("bR here");
+				if(bRooks.get(1).getX()==i && bRooks.get(1).getY()==j) {
+					System.out.println("bR_Left");
+				}else if(bRooks.get(2).getX()==i && bRooks.get(2).getY()==j) {
+					System.out.println("bR_Right");
+				}
 			}else if(chessBoard[i][j][1]=='N') {
 				//Knight
-				System.out.println("bN");
+				if(bKnights.get(1).getX()==i && bKnights.get(1).getY()==j) {
+					System.out.println("bN_Left");
+				}else if(bKnights.get(2).getX()==i && bKnights.get(2).getY()==j) {
+					System.out.println("bN_Right");
+				}
 			}else if(chessBoard[i][j][1]=='B') {
 				//Bishop
-				System.out.println("bB");
+				if(bBishops.get(1).getX()==i && bBishops.get(1).getY()==j) {
+					System.out.println("bB_Left");
+				}else if(bBishops.get(2).getX()==i && bBishops.get(2).getY()==j) {
+					System.out.println("bB_Right");
+				}
 			}else if(chessBoard[i][j][1]=='Q') {
 				//Queen
 				System.out.println("bQ");
@@ -338,13 +446,127 @@ public class Board {
 				System.out.println("bK");
 			}else if(chessBoard[i][j][1]=='P') {
 				//Pawn
-				System.out.println("bP");
+				if(bPawns.get(1).getX()==i && bPawns.get(1).getY()==j) {
+					System.out.println("bP_1");
+					bPawns.get(1).setTarget('o');
+					if(chessBoard[i+1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='w') {
+						//바로 앞에 enemy(black)
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='w') {
+						chessBoard[i+1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='w') {
+						chessBoard[i+1][j-1][2]='*';
+					}
+				}else if(bPawns.get(2).getX()==i && bPawns.get(2).getY()==j) {
+					System.out.println("bP_2");
+					bPawns.get(2).setTarget('o');
+					if(chessBoard[i+1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='w') {
+						//바로 앞에 enemy(black)
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='w') {
+						chessBoard[i+1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='w') {
+						chessBoard[i+1][j-1][2]='*';
+					}
+				}else if(bPawns.get(3).getX()==i && bPawns.get(3).getY()==j) {
+					System.out.println("bP_3");
+					bPawns.get(3).setTarget('o');
+					if(chessBoard[i+1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='w') {
+						//바로 앞에 enemy(black)
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='w') {
+						chessBoard[i+1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='w') {
+						chessBoard[i+1][j-1][2]='*';
+					}
+				}else if(bPawns.get(4).getX()==i && bPawns.get(4).getY()==j) {
+					System.out.println("bP_4");
+					bPawns.get(4).setTarget('o');
+					if(chessBoard[i+1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='w') {
+						//바로 앞에 enemy(black)
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='w') {
+						chessBoard[i+1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='w') {
+						chessBoard[i+1][j-1][2]='*';
+					}
+				}else if(bPawns.get(5).getX()==i && bPawns.get(5).getY()==j) {
+					System.out.println("bP_5");
+					bPawns.get(5).setTarget('o');
+					if(chessBoard[i+1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='w') {
+						//바로 앞에 enemy(black)
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='w') {
+						chessBoard[i+1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='w') {
+						chessBoard[i+1][j-1][2]='*';
+					}
+				}else if(bPawns.get(6).getX()==i && bPawns.get(6).getY()==j) {
+					System.out.println("bP_6");
+					bPawns.get(6).setTarget('o');
+					if(chessBoard[i+1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='w') {
+						//바로 앞에 enemy(black)
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='w') {
+						chessBoard[i+1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='w') {
+						chessBoard[i+1][j-1][2]='*';
+					}
+				}else if(bPawns.get(7).getX()==i && bPawns.get(7).getY()==j) {
+					System.out.println("bP_7");
+					bPawns.get(7).setTarget('o');
+					if(chessBoard[i+1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='w') {
+						//바로 앞에 enemy(black)
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='w') {
+						chessBoard[i+1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='w') {
+						chessBoard[i+1][j-1][2]='*';
+					}
+				}else if(bPawns.get(8).getX()==i && bPawns.get(8).getY()==j) {
+					System.out.println("bP_8");
+					bPawns.get(8).setTarget('o');
+					if(chessBoard[i+1][j][0]==' ') {
+						//바로 앞에 nothing
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j][0]=='w') {
+						//바로 앞에 enemy(black)
+						chessBoard[i+1][j][2]='*';
+					}else if(chessBoard[i-1][j+1][0]=='w') {
+						chessBoard[i+1][j+1][2]='*';
+					}else if(chessBoard[i-1][j-1][0]=='w') {
+						chessBoard[i+1][j-1][2]='*';
+					}
+				}
 			}
 		}
 	}
 	
 	public void moveObject(boolean withFile) {
 		/* Your code */
+		//select Object 에서 target set한 것 + * 한 것 다시 되돌리기 !!!
+		//움직인 piece position set하고, 기존에 있던 position 비우기 
 	}
 	
 	public void printBoard(boolean withFile) {
