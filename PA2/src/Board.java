@@ -255,8 +255,8 @@ public class Board {
 			i=9-i;
 			j=piece.charAt(0)-96;
 			
-			System.out.println("(i, j) = "+i+" "+j);
-			System.out.println(chessBoard[i][j][0]+" "+chessBoard[i][j][1]+" "+chessBoard[i][j][2]);
+			//System.out.println("(i, j) = "+i+" "+j);
+			//System.out.println(chessBoard[i][j][0]+" "+chessBoard[i][j][1]+" "+chessBoard[i][j][2]);
 			
 			if(chessBoard[i][j][0]==' ')
 				continue;
@@ -299,6 +299,31 @@ public class Board {
 			}else if(chessBoard[i][j][1]=='K') {
 				//King
 				System.out.println("wK");
+				if(((i-1>=1) && (i-1<=8)) && (chessBoard[i-1][j][0]==' ' || chessBoard[i-1][j][1]=='b')) {
+					//up
+					chessBoard[i-1][j][2]='*';
+				}else if(chessBoard[i+1][j][0]==' ' || chessBoard[i+1][j][0]=='b') {
+					//down
+					chessBoard[i+1][j][2]='*';
+				}else if(chessBoard[i][j+1][0]==' ' || chessBoard[i][j+1][0]=='b') {
+					//right
+					chessBoard[i][j+1][2]='*';
+				}else if(chessBoard[i][j-1][0]==' ' || chessBoard[i][j-1][0]=='b') {
+					//left
+					chessBoard[i][j-1][2]='*';
+				}else if(chessBoard[i-1][j-1][0]==' ' || chessBoard[i-1][j-1][0]=='b') {
+					//left up
+					chessBoard[i][j-1][2]='*';
+				}else if(chessBoard[i+1][j-1][0]==' ' || chessBoard[i+1][j-1][0]=='b') {
+					//left down
+					chessBoard[i+1][j-1][2]='*';
+				}else if(chessBoard[i-1][j+1][0]==' ' || chessBoard[i-1][j+1][0]=='b') {
+					//right up
+					chessBoard[i-1][j+1][2]='*';
+				}else if(chessBoard[i+1][j+1][0]==' ' || chessBoard[i+1][j+1][0]=='b') {
+					//right down
+					chessBoard[i+1][j+1][2]='*';
+				}
 			}else if(chessBoard[i][j][1]=='P') {
 				//Pawn
 				if(wPawns.get(1).getX()==i && wPawns.get(1).getY()==j) {
@@ -444,6 +469,31 @@ public class Board {
 			}else if(chessBoard[i][j][1]=='K') {
 				//King
 				System.out.println("bK");
+				if(chessBoard[i-1][j][0]==' ' || chessBoard[i-1][j][1]=='w') {
+					//up
+					chessBoard[i-1][j][2]='*';
+				}else if(chessBoard[i+1][j][0]==' ' || chessBoard[i+1][j][0]=='w') {
+					//down
+					chessBoard[i+1][j][2]='*';
+				}else if(chessBoard[i][j+1][0]==' ' || chessBoard[i][j+1][0]=='w') {
+					//right
+					chessBoard[i][j+1][2]='*';
+				}else if(chessBoard[i][j-1][0]==' ' || chessBoard[i][j-1][0]=='w') {
+					//left
+					chessBoard[i][j-1][2]='*';
+				}else if(chessBoard[i-1][j-1][0]==' ' || chessBoard[i-1][j-1][0]=='w') {
+					//left up
+					chessBoard[i][j-1][2]='*';
+				}else if(chessBoard[i+1][j-1][0]==' ' || chessBoard[i+1][j-1][0]=='w') {
+					//left down
+					chessBoard[i+1][j-1][2]='*';
+				}else if(chessBoard[i-1][j+1][0]==' ' || chessBoard[i-1][j+1][0]=='w') {
+					//right up
+					chessBoard[i-1][j+1][2]='*';
+				}else if(chessBoard[i+1][j+1][0]==' ' || chessBoard[i+1][j+1][0]=='w') {
+					//right down
+					chessBoard[i+1][j+1][2]='*';
+				}
 			}else if(chessBoard[i][j][1]=='P') {
 				//Pawn
 				if(bPawns.get(1).getX()==i && bPawns.get(1).getY()==j) {
