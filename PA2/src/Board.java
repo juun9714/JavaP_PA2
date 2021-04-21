@@ -418,8 +418,190 @@ public class Board {
 				//Knight
 				if(wKnights.get(1).getX()==i && wKnights.get(1).getY()==j) {
 					System.out.println("wN_Left");
+					int p;
+					int q;
+					
+					//white up&right
+					p=i-2;
+					q=j+1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white up&left
+					p=i-2;
+					q=j-1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white right&up
+					p=i-1;
+					q=j+2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white right&down
+					p=i+1;
+					q=j+2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white down&right
+					p=i+2;
+					q=j+1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white down&left
+					p=i+2;
+					q=j-1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white left&up
+					p=i-1;
+					q=j-2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white left&down
+					p=i+1;
+					q=j-2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
 				}else if(wKnights.get(2).getX()==i && wKnights.get(2).getY()==j) {
 					System.out.println("wN_Right");
+					
+					int p;
+					int q;
+					
+					//white up&right
+					p=i-2;
+					q=j+1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white up&left
+					p=i-2;
+					q=j-1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white right&up
+					p=i-1;
+					q=j+2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white right&down
+					p=i+1;
+					q=j+2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white down&right
+					p=i+2;
+					q=j+1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white down&left
+					p=i+2;
+					q=j-1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white left&up
+					p=i-1;
+					q=j-2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white left&down
+					p=i+1;
+					q=j-2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+						}
+					}
 				}
 			}else if(chessBoard[i][j][1]=='B') {
 				//Bishop
@@ -590,6 +772,158 @@ public class Board {
 			}else if(chessBoard[i][j][1]=='Q') {
 				//Queen
 				System.out.println("wQ");
+
+				int p=i;
+				int q=j;
+				//+Rook
+				while(true) {
+					//white Rook up
+					p--;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+							break;//eat enemy and stop
+						}else
+							break;//blocked
+					}else//out of Boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//white Rook down
+					p++;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+							break;//eat enemy and stop
+						}else
+							break;//blocked
+					}else//out of Boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//white Rook right
+					q++;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							chessBoard[p][q][2]='*';
+							break;//eat enemy and stop
+						}else
+							break;//blocked
+					}else//out of Boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//white Rook left
+					q--;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') { //blank
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {//enemy
+							chessBoard[p][q][2]='*';
+							break;//eat enemy and stop
+						}else
+							break;//blocked
+					}else//out of Boundary
+						break;
+				}
+				
+				
+				//+Bishop
+				p=i;
+				q=j;
+				while(true) {
+					//white left down
+					p++;
+					q--;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							//blank
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							//enemy, get enemy and stop
+							chessBoard[p][q][2]='*';
+							break;
+						}else //blocked
+							break;
+					}else //out of boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//white left up
+					p--;
+					q--;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							//blank
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							//enemy, get enemy and stop
+							chessBoard[p][q][2]='*';
+							break;
+						}else //blocked
+							break;
+					}else //out of boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//white right up
+					p--;
+					q++;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							//blank
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							//enemy, get enemy and stop
+							chessBoard[p][q][2]='*';
+							break;
+						}else //blocked
+							break;
+					}else //out of boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//white right down
+					p++;
+					q++;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							//blank
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='b') {
+							//enemy, get enemy and stop
+							chessBoard[p][q][2]='*';
+							break;
+						}else //blocked
+							break;
+					}else //out of boundary
+						break;
+				}
+				
 			}else if(chessBoard[i][j][1]=='K') {
 				//King
 				System.out.println("wK");
@@ -956,8 +1290,190 @@ public class Board {
 				//Knight
 				if(bKnights.get(1).getX()==i && bKnights.get(1).getY()==j) {
 					System.out.println("bN_Left");
+					
+					int p;
+					int q;
+					
+					//white up&right
+					p=i-2;
+					q=j+1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white up&left
+					p=i-2;
+					q=j-1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white right&up
+					p=i-1;
+					q=j+2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white right&down
+					p=i+1;
+					q=j+2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white down&right
+					p=i+2;
+					q=j+1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white down&left
+					p=i+2;
+					q=j-1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white left&up
+					p=i-1;
+					q=j-2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white left&down
+					p=i+1;
+					q=j-2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
 				}else if(bKnights.get(2).getX()==i && bKnights.get(2).getY()==j) {
 					System.out.println("bN_Right");
+					
+					int p;
+					int q;
+					
+					//white up&right
+					p=i-2;
+					q=j+1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white up&left
+					p=i-2;
+					q=j-1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white right&up
+					p=i-1;
+					q=j+2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white right&down
+					p=i+1;
+					q=j+2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white down&right
+					p=i+2;
+					q=j+1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white down&left
+					p=i+2;
+					q=j-1;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white left&up
+					p=i-1;
+					q=j-2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
+					
+					//white left&down
+					p=i+1;
+					q=j-2;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+						}
+					}
 				}
 			}else if(chessBoard[i][j][1]=='B') {
 				//Bishop
@@ -1127,6 +1643,156 @@ public class Board {
 			}else if(chessBoard[i][j][1]=='Q') {
 				//Queen
 				System.out.println("bQ");
+				
+				int p=i;
+				int q=j;
+				//Rook
+				while(true) {
+					//black Rook up
+					p--;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+							break;//eat enemy and stop
+						}else
+							break;//blocked
+					}else//out of Boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//black Rook down
+					p++;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+							break;//eat enemy and stop
+						}else
+							break;//blocked
+					}else//out of Boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//black Rook right
+					q++;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							chessBoard[p][q][2]='*';
+							break;//eat enemy and stop
+						}else
+							break;//blocked
+					}else//out of Boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//black Rook left
+					q--;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') { //blank
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {//enemy
+							chessBoard[p][q][2]='*';
+							break;//eat enemy and stop
+						}else
+							break;//blocked
+					}else//out of Boundary
+						break;
+				}
+				
+				//++Bishop
+				p=i;
+				q=j;
+				while(true) {
+					//black left down
+					p++;
+					q--;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							//blank
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							//enemy, get enemy and stop
+							chessBoard[p][q][2]='*';
+							break;
+						}else //blocked
+							break;
+					}else //out of boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//black left up
+					p--;
+					q--;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							//blank
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							//enemy, get enemy and stop
+							chessBoard[p][q][2]='*';
+							break;
+						}else //blocked
+							break;
+					}else //out of boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//black right up
+					p--;
+					q++;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							//blank
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							//enemy, get enemy and stop
+							chessBoard[p][q][2]='*';
+							break;
+						}else //blocked
+							break;
+					}else //out of boundary
+						break;
+				}
+				
+				p=i;
+				q=j;
+				while(true) {
+					//black right down
+					p++;
+					q++;
+					if(p>=1 && p<=8 && q>=1 && q<=8) {
+						if(chessBoard[p][q][0]==' ') {
+							//blank
+							chessBoard[p][q][2]='*';
+						}else if(chessBoard[p][q][0]=='w') {
+							//enemy, get enemy and stop
+							chessBoard[p][q][2]='*';
+							break;
+						}else //blocked
+							break;
+					}else //out of boundary
+						break;
+				}
 			}else if(chessBoard[i][j][1]=='K') {
 				//King
 				System.out.println("bK");
