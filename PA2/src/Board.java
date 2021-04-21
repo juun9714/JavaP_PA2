@@ -255,26 +255,21 @@ public class Board {
 			i=9-i;
 			j=piece.charAt(0)-96;
 			
-			//System.out.println("(i, j) = "+i+" "+j);
-			//System.out.println(chessBoard[i][j][0]+" "+chessBoard[i][j][1]+" "+chessBoard[i][j][2]);
-			
-			if(chessBoard[i][j][0]==' ')
+			if(chessBoard[i][j][0]==' ') //nothing there
 				continue;
-			else {
+			else if(i>8 || i<1 || j>8 || j<1) //out of Boundary
+				continue;
+			else //choose right position
 				break;
-			}
 		}
 		
 		if(chessBoard[i][j][0]=='w') {
 			//white
 			if(chessBoard[i][j][1]=='R') {
-				/*
-				Rook 
-				wRooks.put(1,wRookL);
-				wRooks.put(2,wRookR);
-				*/
+				//ROOK
 				if(wRooks.get(1).getX()==i && wRooks.get(1).getY()==j) {
 					System.out.println("wR_Left");
+					wRooks.get(1).setTarget('o');
 					int p=i;
 					int q=j;
 					
@@ -345,7 +340,7 @@ public class Board {
 					}
 				}else if(wRooks.get(2).getX()==i && wRooks.get(2).getY()==j) {
 					System.out.println("wR_Right");
-					
+					wRooks.get(2).setTarget('o');
 					int p=i;
 					int q=j;
 					while(true) {
@@ -418,6 +413,7 @@ public class Board {
 				//Knight
 				if(wKnights.get(1).getX()==i && wKnights.get(1).getY()==j) {
 					System.out.println("wN_Left");
+					wKnights.get(1).setTarget('o');
 					int p;
 					int q;
 					
@@ -511,7 +507,7 @@ public class Board {
 					
 				}else if(wKnights.get(2).getX()==i && wKnights.get(2).getY()==j) {
 					System.out.println("wN_Right");
-					
+					wKnights.get(2).setTarget('o');
 					int p;
 					int q;
 					
@@ -607,6 +603,7 @@ public class Board {
 				//Bishop
 				if(wBishops.get(1).getX()==i && wBishops.get(1).getY()==j) {
 					System.out.println("wB_Left");
+					wBishops.get(1).setTarget('o');
 					int p=i;
 					int q=j;
 					while(true) {
@@ -688,7 +685,7 @@ public class Board {
 					}
 				}else if(wBishops.get(2).getX()==i && wBishops.get(2).getY()==j) {
 					System.out.println("wB_Right");
-					
+					wBishops.get(2).setTarget('o');
 					int p=i;
 					int q=j;
 					while(true) {
@@ -772,6 +769,7 @@ public class Board {
 			}else if(chessBoard[i][j][1]=='Q') {
 				//Queen
 				System.out.println("wQ");
+				wQueen.setTarget('o');
 
 				int p=i;
 				int q=j;
@@ -1145,6 +1143,7 @@ public class Board {
 				//Rook
 				if(bRooks.get(1).getX()==i && bRooks.get(1).getY()==j) {
 					System.out.println("bR_Left");
+					bRooks.get(1).setTarget('o');
 					int p=i;
 					int q=j;
 					
@@ -1216,6 +1215,7 @@ public class Board {
 					
 				}else if(bRooks.get(2).getX()==i && bRooks.get(2).getY()==j) {
 					System.out.println("bR_Right");
+					bRooks.get(2).setTarget('o');
 					
 					int p=i;
 					int q=j;
@@ -1290,7 +1290,7 @@ public class Board {
 				//Knight
 				if(bKnights.get(1).getX()==i && bKnights.get(1).getY()==j) {
 					System.out.println("bN_Left");
-					
+					bKnights.get(1).setTarget('o');
 					int p;
 					int q;
 					
@@ -1383,6 +1383,7 @@ public class Board {
 					}
 				}else if(bKnights.get(2).getX()==i && bKnights.get(2).getY()==j) {
 					System.out.println("bN_Right");
+					bKnights.get(2).setTarget('o');
 					
 					int p;
 					int q;
@@ -1479,6 +1480,7 @@ public class Board {
 				//Bishop
 				if(bBishops.get(1).getX()==i && bBishops.get(1).getY()==j) {
 					System.out.println("bB_Left");
+					bBishops.get(1).setTarget('o');
 					int p=i;
 					int q=j;
 					while(true) {
@@ -1560,6 +1562,7 @@ public class Board {
 					}
 				}else if(bBishops.get(2).getX()==i && bBishops.get(2).getY()==j) {
 					System.out.println("bB_Right");
+					bBishops.get(2).setTarget('o');
 					int p=i;
 					int q=j;
 					while(true) {
@@ -1643,7 +1646,7 @@ public class Board {
 			}else if(chessBoard[i][j][1]=='Q') {
 				//Queen
 				System.out.println("bQ");
-				
+				bQueen.setTarget('o');
 				int p=i;
 				int q=j;
 				//Rook
