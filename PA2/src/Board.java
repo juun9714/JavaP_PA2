@@ -10,7 +10,14 @@ public class Board {
 	
 	char[][][] chessBoard;
 	int target;
+	int finish;
+	/*
+	 * finish==0 : not finished
+	 * finish==1 : white win
+	 * finish==2 : black win
+	 */
 	int is_path;
+	int turn;
 	int [][] where;
 	Scanner scan = new Scanner(System.in);
 	gameObject wKing;
@@ -61,10 +68,141 @@ public class Board {
 	
 	void Erase(int i, int j) {
 		//need to erase eaten piece by something... 
+		if(chessBoard[i][j][0]=='w') {
+			if(chessBoard[i][j][1]=='R') {
+				//White_Rook
+				if(wRooks.get(1).getX()==i && wRooks.get(1).getY()==j) {
+					wRooks.get(1).setX(0);
+					wRooks.get(1).setY(0);
+				}else if(wRooks.get(2).getX()==i && wRooks.get(2).getY()==j) {
+					wRooks.get(2).setX(0);
+					wRooks.get(2).setY(0);
+				}
+			}else if(chessBoard[i][j][1]=='N') {
+				//White_Knight
+				if(wKnights.get(1).getX()==i && wKnights.get(1).getY()==j) {
+					wKnights.get(1).setX(0);
+					wKnights.get(1).setY(0);
+				}else if(wKnights.get(2).getX()==i && wKnights.get(2).getY()==j) {
+					wKnights.get(2).setX(0);
+					wKnights.get(2).setY(0);
+				}
+			}else if(chessBoard[i][j][1]=='B') {
+				//White_Bishop
+				if(wBishops.get(1).getX()==i && wBishops.get(1).getY()==j) {
+					wBishops.get(1).setX(0);
+					wBishops.get(1).setY(0);
+				}else if(wBishops.get(2).getX()==i && wBishops.get(2).getY()==j) {
+					wBishops.get(2).setX(0);
+					wBishops.get(2).setY(0);
+				}
+			}else if(chessBoard[i][j][1]=='Q') {
+				//White_Queen
+				wQueen.setX(0);
+				wQueen.setY(0);
+			}else if(chessBoard[i][j][1]=='K') {
+				//White_King
+				wKing.setX(0);
+				wKing.setY(0);
+				finish=2;
+			}else if(chessBoard[i][j][1]=='P') {
+				if(wPawns.get(1).getX()==i && wPawns.get(1).getY()==j) {
+					wPawns.get(1).setX(0);
+					wPawns.get(1).setY(0);
+				}else if(wPawns.get(2).getX()==i && wPawns.get(2).getY()==j) {
+					wPawns.get(2).setX(0);
+					wPawns.get(2).setY(0);
+				}else if(wPawns.get(3).getX()==i && wPawns.get(3).getY()==j) {
+					wPawns.get(3).setX(0);
+					wPawns.get(3).setY(0);
+				}else if(wPawns.get(4).getX()==i && wPawns.get(4).getY()==j) {
+					wPawns.get(4).setX(0);
+					wPawns.get(4).setY(0);
+				}else if(wPawns.get(5).getX()==i && wPawns.get(5).getY()==j) {
+					wPawns.get(5).setX(0);
+					wPawns.get(5).setY(0);
+				}else if(wPawns.get(6).getX()==i && wPawns.get(6).getY()==j) {
+					wPawns.get(6).setX(0);
+					wPawns.get(6).setY(0);
+				}else if(wPawns.get(7).getX()==i && wPawns.get(7).getY()==j) {
+					wPawns.get(7).setX(0);
+					wPawns.get(7).setY(0);
+				}else if(wPawns.get(8).getX()==i && wPawns.get(8).getY()==j) {
+					wPawns.get(8).setX(0);
+					wPawns.get(8).setY(0);
+				}
+			}
+			
+		}else if(chessBoard[i][j][0]=='b') {
+			if(chessBoard[i][j][1]=='R') {
+				//Black_Rook
+				if(bRooks.get(1).getX()==i && bRooks.get(1).getY()==j) {
+					bRooks.get(1).setX(0);
+					bRooks.get(1).setY(0);
+				}else if(bRooks.get(2).getX()==i && bRooks.get(2).getY()==j) {
+					bRooks.get(2).setX(0);
+					bRooks.get(2).setY(0);
+				}
+			}else if(chessBoard[i][j][1]=='N') {
+				//Black_Knight
+				if(bKnights.get(1).getX()==i && bKnights.get(1).getY()==j) {
+					bKnights.get(1).setX(0);
+					bKnights.get(1).setY(0);
+				}else if(bKnights.get(2).getX()==i && bKnights.get(2).getY()==j) {
+					bKnights.get(2).setX(0);
+					bKnights.get(2).setY(0);
+				}
+			}else if(chessBoard[i][j][1]=='B') {
+				//Black_Bishop
+				if(bBishops.get(1).getX()==i && bBishops.get(1).getY()==j) {
+					bBishops.get(1).setX(0);
+					bBishops.get(1).setY(0);
+				}else if(bBishops.get(2).getX()==i && bBishops.get(2).getY()==j) {
+					bBishops.get(2).setX(0);
+					bBishops.get(2).setY(0);
+				}
+			}else if(chessBoard[i][j][1]=='Q') {
+				//Black_Queen
+				bQueen.setX(0);
+				bQueen.setY(0);
+			}else if(chessBoard[i][j][1]=='K') {
+				//Black_King
+				bKing.setX(0);
+				bKing.setY(0);
+				finish=1;
+			}else if(chessBoard[i][j][1]=='P') {
+				if(bPawns.get(1).getX()==i && bPawns.get(1).getY()==j) {
+					bPawns.get(1).setX(0);
+					bPawns.get(1).setY(0);
+				}else if(bPawns.get(2).getX()==i && bPawns.get(2).getY()==j) {
+					bPawns.get(2).setX(0);
+					bPawns.get(2).setY(0);
+				}else if(bPawns.get(3).getX()==i && bPawns.get(3).getY()==j) {
+					bPawns.get(3).setX(0);
+					bPawns.get(3).setY(0);
+				}else if(bPawns.get(4).getX()==i && bPawns.get(4).getY()==j) {
+					bPawns.get(4).setX(0);
+					bPawns.get(4).setY(0);
+				}else if(bPawns.get(5).getX()==i && bPawns.get(5).getY()==j) {
+					bPawns.get(5).setX(0);
+					bPawns.get(5).setY(0);
+				}else if(bPawns.get(6).getX()==i && bPawns.get(6).getY()==j) {
+					bPawns.get(6).setX(0);
+					bPawns.get(6).setY(0);
+				}else if(bPawns.get(7).getX()==i && bPawns.get(7).getY()==j) {
+					bPawns.get(7).setX(0);
+					bPawns.get(7).setY(0);
+				}else if(bPawns.get(8).getX()==i && bPawns.get(8).getY()==j) {
+					bPawns.get(8).setX(0);
+					bPawns.get(8).setY(0);
+				}
+			}
+		}
 	}
 	
 	void setMap() {
 		//set chess board with white pieces
+				
 				chessBoard[wPawns.get(1).getX()][wPawns.get(1).getY()][0]=wPawns.get(1).getColor();
 				chessBoard[wPawns.get(1).getX()][wPawns.get(1).getY()][1]=wPawns.get(1).getType();
 				chessBoard[wPawns.get(2).getX()][wPawns.get(2).getY()][0]=wPawns.get(2).getColor();
@@ -141,6 +279,10 @@ public class Board {
 				chessBoard[bKing.getX()][bKing.getY()][1]=bKing.getType();
 				chessBoard[bQueen.getX()][bQueen.getY()][0]=bQueen.getColor();
 				chessBoard[bQueen.getX()][bQueen.getY()][1]=bQueen.getType();
+				
+				chessBoard[0][0][0]=' ';
+				chessBoard[0][0][1]=' ';
+				chessBoard[0][0][2]=' ';
 	}
 	
 	void setBlank() {
@@ -156,6 +298,9 @@ public class Board {
 		
 		//White Pieces first
 		is_path=0;
+		turn=0;
+		//turn == 0 : white turn
+		//turn == 1 : blakc turn 
 		wKing=new gameObject(8, 5, 'K','w','x');
 		wQueen=new gameObject(8, 4, 'Q','w','x');
 		wBishopL=new gameObject(8, 3, 'B','w','x');
@@ -338,6 +483,14 @@ public class Board {
 
 	public boolean isFinish(boolean withFile) {
 		/* Your code */
+		if(finish==1) {
+			System.out.println("White Wins");
+			return true;
+		}
+		else if(finish==2) {
+			System.out.println("Black Wins");
+			return true;
+		}
 		return false;
 	}
 	
@@ -356,6 +509,10 @@ public class Board {
 				continue;
 			else if(i>8 || i<1 || j>8 || j<1) //out of Boundary
 				continue;
+			else if(turn==0 && chessBoard[i][j][0]=='b')
+				continue; //choose black piece on white turn 
+			else if(turn==1 && chessBoard[i][j][0]=='w')
+				continue; //choose white piece on black turn 
 			else //choose right position
 			{
 				if(chessBoard[i][j][0]=='w') {
@@ -2467,7 +2624,10 @@ public class Board {
 			}
 		}
 		
-		
+		if(turn==0)
+			turn=1;
+		else if(turn==1)
+			turn=0;
 	}
 	
 	public void moveObject(boolean withFile) {
@@ -2516,6 +2676,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wRooks.get(1).setX(i);
 					wRooks.get(1).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2529,6 +2691,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wKnights.get(1).setX(i);
 					wKnights.get(1).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2542,6 +2706,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wBishops.get(1).setX(i);
 					wBishops.get(1).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2555,6 +2721,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wQueen.setX(i);
 					wQueen.setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2568,6 +2736,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wKing.setX(i);
 					wKing.setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2581,6 +2751,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wBishops.get(2).setX(i);
 					wBishops.get(2).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2594,6 +2766,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wKnights.get(2).setX(i);
 					wKnights.get(2).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2607,6 +2781,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wRooks.get(2).setX(i);
 					wRooks.get(2).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2620,6 +2796,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wPawns.get(1).setX(i);
 					wPawns.get(1).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2633,6 +2811,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wPawns.get(2).setX(i);
 					wPawns.get(2).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2646,6 +2826,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wPawns.get(3).setX(i);
 					wPawns.get(3).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2659,6 +2841,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wPawns.get(4).setX(i);
 					wPawns.get(4).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2672,6 +2856,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wPawns.get(5).setX(i);
 					wPawns.get(5).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2685,6 +2871,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wPawns.get(6).setX(i);
 					wPawns.get(6).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2698,6 +2886,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wPawns.get(7).setX(i);
 					wPawns.get(7).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2711,6 +2901,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					wPawns.get(8).setX(i);
 					wPawns.get(8).setY(j);
+					if(chessBoard[i][j][0]=='b')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2724,6 +2916,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bRooks.get(1).setX(i);
 					bRooks.get(1).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2737,6 +2931,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bKnights.get(1).setX(i);
 					bKnights.get(1).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2750,6 +2946,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bBishops.get(1).setX(i);
 					bBishops.get(1).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2763,6 +2961,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bQueen.setX(i);
 					bQueen.setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2776,6 +2976,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bKing.setX(i);
 					bKing.setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2789,6 +2991,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bBishops.get(2).setX(i);
 					bBishops.get(2).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2802,6 +3006,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bKnights.get(2).setX(i);
 					bKnights.get(2).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2815,6 +3021,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bRooks.get(2).setX(i);
 					bRooks.get(2).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2828,6 +3036,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bPawns.get(1).setX(i);
 					bPawns.get(1).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2841,6 +3051,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bPawns.get(2).setX(i);
 					bPawns.get(2).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2854,6 +3066,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bPawns.get(3).setX(i);
 					bPawns.get(3).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2867,6 +3081,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bPawns.get(4).setX(i);
 					bPawns.get(4).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2880,6 +3096,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bPawns.get(5).setX(i);
 					bPawns.get(5).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2893,6 +3111,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bPawns.get(6).setX(i);
 					bPawns.get(6).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2906,7 +3126,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bPawns.get(7).setX(i);
 					bPawns.get(7).setY(j);
-					Erase(i,j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
@@ -2920,6 +3141,8 @@ public class Board {
 					chessBoard[p][q][1]=' ';
 					bPawns.get(8).setX(i);
 					bPawns.get(8).setY(j);
+					if(chessBoard[i][j][0]=='w')
+						Erase(i,j);
 					setMap();
 					setBlank();
 				}
