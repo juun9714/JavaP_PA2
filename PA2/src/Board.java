@@ -457,9 +457,7 @@ public class Board {
 		if(c=='w') {
 
 			if(wPawns.get(1).getX()==i && wPawns.get(1).getY()==j) {
-				System.out.println("wP_1");
 				target=9;
-				wPawns.get(1).setTarget('o');
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
@@ -487,9 +485,7 @@ public class Board {
 					}
 				}
 			}else if(wPawns.get(2).getX()==i && wPawns.get(2).getY()==j) {
-				System.out.println("wP_2");
 				target=10;
-				wPawns.get(2).setTarget('o');
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
@@ -517,9 +513,7 @@ public class Board {
 					}
 				}
 			}else if(wPawns.get(3).getX()==i && wPawns.get(3).getY()==j) {
-				System.out.println("wP_3");
 				target=11;
-				wPawns.get(3).setTarget('o');
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
@@ -547,9 +541,7 @@ public class Board {
 					}
 				}
 			}else if(wPawns.get(4).getX()==i && wPawns.get(4).getY()==j) {
-				System.out.println("wP_4");
 				target=12;
-				wPawns.get(4).setTarget('o');
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
@@ -577,9 +569,7 @@ public class Board {
 					}
 				}
 			}else if(wPawns.get(5).getX()==i && wPawns.get(5).getY()==j) {
-				System.out.println("wP_5");
 				target=13;
-				wPawns.get(5).setTarget('o');
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
@@ -607,9 +597,7 @@ public class Board {
 					}
 				}
 			}else if(wPawns.get(6).getX()==i && wPawns.get(6).getY()==j) {
-				System.out.println("wP_6");
 				target=14;
-				wPawns.get(6).setTarget('o');
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
@@ -637,9 +625,7 @@ public class Board {
 					}
 				}
 			}else if(wPawns.get(7).getX()==i && wPawns.get(7).getY()==j) {
-				System.out.println("wP_7");
 				target=15;
-				wPawns.get(7).setTarget('o');
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
@@ -667,9 +653,7 @@ public class Board {
 					}
 				}
 			}else if(wPawns.get(8).getX()==i && wPawns.get(8).getY()==j) {
-				System.out.println("wP_8");
 				target=16;
-				wPawns.get(8).setTarget('o');
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
@@ -699,9 +683,7 @@ public class Board {
 			}
 		}else if(c=='b') {
 			if(bPawns.get(1).getX()==i && bPawns.get(1).getY()==j) {
-				System.out.println("bP_1");
 				target=25;
-				bPawns.get(1).setTarget('o');
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i+1][j][0]==' ') {
@@ -729,9 +711,7 @@ public class Board {
 					}
 				}
 			}else if(bPawns.get(2).getX()==i && bPawns.get(2).getY()==j) {
-				System.out.println("bP_2");
 				target=26;
-				bPawns.get(2).setTarget('o');
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i+1][j][0]==' ') {
@@ -759,9 +739,7 @@ public class Board {
 					}
 				}
 			}else if(bPawns.get(3).getX()==i && bPawns.get(3).getY()==j) {
-				System.out.println("bP_3");
 				target=27;
-				bPawns.get(3).setTarget('o');
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i+1][j][0]==' ') {
@@ -817,9 +795,7 @@ public class Board {
 					}
 				}
 			}else if(bPawns.get(5).getX()==i && bPawns.get(5).getY()==j) {
-				System.out.println("bP_5");
 				target=29;
-				bPawns.get(5).setTarget('o');
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i+1][j][0]==' ') {
@@ -847,9 +823,7 @@ public class Board {
 					}
 				}
 			}else if(bPawns.get(6).getX()==i && bPawns.get(6).getY()==j) {
-				System.out.println("bP_6");
 				target=30;
-				bPawns.get(6).setTarget('o');
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i+1][j][0]==' ') {
@@ -877,9 +851,7 @@ public class Board {
 					}
 				}
 			}else if(bPawns.get(7).getX()==i && bPawns.get(7).getY()==j) {
-				System.out.println("bP_7");
 				target=31;
-				bPawns.get(7).setTarget('o');
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i+1][j][0]==' ') {
@@ -907,8 +879,6 @@ public class Board {
 					}
 				}
 			}else if(bPawns.get(8).getX()==i && bPawns.get(8).getY()==j) {
-				System.out.println("bP_8");
-				bPawns.get(8).setTarget('o');
 				target=32;
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
@@ -1431,9 +1401,8 @@ public class Board {
 	
 	void setBlank() {
 		for(int i=1;i<9;i++) {
-			for(int j=1;j<9;j++) {
+			for(int j=1;j<9;j++)
 				chessBoard[i][j][2]=' ';
-			}
 		}
 	}
 	
@@ -1668,11 +1637,8 @@ public class Board {
 							int p=i;
 							int q=j;
 							moveRook('w',p,q,i,j);
-							
 						}else if(wRooks.get(2).getX()==i && wRooks.get(2).getY()==j) {
-							System.out.println("wR_Right");
 							target=8;
-							wRooks.get(2).setTarget('o');
 							int p=i;
 							int q=j;
 							moveRook('w',p,q,i,j);
@@ -1704,13 +1670,10 @@ public class Board {
 							moveBishop('w',p,q,i,j);
 						}
 					}else if(chessBoard[i][j][1]=='Q') {
-						//Queen
 						target=4;
 						int p=i;
 						int q=j;
-						//+Rook
 						moveRook('w',p,q,i,j);
-						//+Bishop
 						p=i;
 						q=j;
 						moveBishop('w',p,q,i,j);
@@ -1719,7 +1682,6 @@ public class Board {
 						target=5;
 						moveKing('w',i,j);
 					}else if(chessBoard[i][j][1]=='P') {
-						//Pawn
 						movePawn('w',i,j);
 					}
 				}else if(chessBoard[i][j][0]=='b') {
@@ -1757,8 +1719,6 @@ public class Board {
 							int p=i;
 							int q=j;
 							moveBishop('b',p,q,i,j);
-							
-							
 						}else if(bBishops.get(2).getX()==i && bBishops.get(2).getY()==j) {
 							target=22;
 							int p=i;
@@ -1770,10 +1730,7 @@ public class Board {
 						target=20;
 						int p=i;
 						int q=j;
-						//Rook
 						moveRook('b',p,q,i,j);
-						
-						//++Bishop
 						p=i;
 						q=j;
 						moveBishop('b',p,q,i,j);
@@ -1786,14 +1743,12 @@ public class Board {
 						movePawn('b',i,j);
 					}
 				}
-				
 				if(is_path==0)
 					continue;
 				else if(is_path==1)
 					break;
 			}
 		}
-		
 		if(turn==0)
 			turn=1;
 		else if(turn==1)
@@ -1804,7 +1759,6 @@ public class Board {
 		/* Your code */
 		//select Object 에서 target set한 것 + * 한 것 다시 되돌리기 !!!
 		//움직인 piece position set하고, 기존에 있던 position 비우기 
-		System.out.println("in moveObject method");
 		for(int i=0;i<9;i++) {
 			for(int j=0;j<9;j++) {
 				for(int k=0;k<3;k++) {
