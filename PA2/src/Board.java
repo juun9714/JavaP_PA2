@@ -490,20 +490,15 @@ public class Board {
 						is_path=1;
 					}
 				}
-				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i-1][j][0]=='b') {
-						chessBoard[i-1][j][2]='*';
-						is_path=1;
-					}
-				}
 				if((i-1>=1) && (i-1<=8) && (j+1>=1) && (j+1<=8)) {
+					//오른쪽 위 enemy
 					if(chessBoard[i-1][j+1][0]=='b') {
 						chessBoard[i-1][j+1][2]='*';
 						is_path=1;
 					}
 				}
 				if((i-1>=1) && (i-1<=8) && (j-1>=1) && (j-1<=8)) {
+					//왼쪽 위 enemy
 					if(chessBoard[i-1][j-1][0]=='b') {
 						chessBoard[i-1][j-1][2]='*';
 						is_path=1;
@@ -514,13 +509,6 @@ public class Board {
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
-						chessBoard[i-1][j][2]='*';
-						is_path=1;
-					}
-				}
-				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i-1][j][0]=='b') {
 						chessBoard[i-1][j][2]='*';
 						is_path=1;
 					}
@@ -546,13 +534,6 @@ public class Board {
 						is_path=1;
 					}
 				}
-				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i-1][j][0]=='b') {
-						chessBoard[i-1][j][2]='*';
-						is_path=1;
-					}
-				}
 				if((i-1>=1) && (i-1<=8) && (j+1>=1) && (j+1<=8)) {
 					if(chessBoard[i-1][j+1][0]=='b') {
 						chessBoard[i-1][j+1][2]='*';
@@ -570,13 +551,6 @@ public class Board {
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
-						chessBoard[i-1][j][2]='*';
-						is_path=1;
-					}
-				}
-				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i-1][j][0]=='b') {
 						chessBoard[i-1][j][2]='*';
 						is_path=1;
 					}
@@ -602,13 +576,6 @@ public class Board {
 						is_path=1;
 					}
 				}
-				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i-1][j][0]=='b') {
-						chessBoard[i-1][j][2]='*';
-						is_path=1;
-					}
-				}
 				if((i-1>=1) && (i-1<=8) && (j+1>=1) && (j+1<=8)) {
 					if(chessBoard[i-1][j+1][0]=='b') {
 						chessBoard[i-1][j+1][2]='*';
@@ -626,13 +593,6 @@ public class Board {
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
-						chessBoard[i-1][j][2]='*';
-						is_path=1;
-					}
-				}
-				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i-1][j][0]=='b') {
 						chessBoard[i-1][j][2]='*';
 						is_path=1;
 					}
@@ -658,13 +618,6 @@ public class Board {
 						is_path=1;
 					}
 				}
-				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i-1][j][0]=='b') {
-						chessBoard[i-1][j][2]='*';
-						is_path=1;
-					}
-				}
 				if((i-1>=1) && (i-1<=8) && (j+1>=1) && (j+1<=8)) {
 					if(chessBoard[i-1][j+1][0]=='b') {
 						chessBoard[i-1][j+1][2]='*';
@@ -682,13 +635,6 @@ public class Board {
 				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i-1][j][0]==' ') {
-						chessBoard[i-1][j][2]='*';
-						is_path=1;
-					}
-				}
-				if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i-1][j][0]=='b') {
 						chessBoard[i-1][j][2]='*';
 						is_path=1;
 					}
@@ -716,13 +662,6 @@ public class Board {
 						is_path=1;
 					}
 				}
-				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i+1][j][0]=='w') {
-						chessBoard[i+1][j][2]='*';
-						is_path=1;
-					}
-				}
 				if((i+1>=1) && (i+1<=8) && (j+1>=1) && (j+1<=8)) {
 					if(chessBoard[i+1][j+1][0]=='w') {
 						chessBoard[i+1][j+1][2]='*';
@@ -740,13 +679,6 @@ public class Board {
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i+1][j][0]==' ') {
-						chessBoard[i+1][j][2]='*';
-						is_path=1;
-					}
-				}
-				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i+1][j][0]=='w') {
 						chessBoard[i+1][j][2]='*';
 						is_path=1;
 					}
@@ -772,13 +704,6 @@ public class Board {
 						is_path=1;
 					}
 				}
-				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i+1][j][0]=='w') {
-						chessBoard[i+1][j][2]='*';
-						is_path=1;
-					}
-				}
 				if((i+1>=1) && (i+1<=8) && (j+1>=1) && (j+1<=8)) {
 					if(chessBoard[i+1][j+1][0]=='w') {
 						chessBoard[i+1][j+1][2]='*';
@@ -796,13 +721,6 @@ public class Board {
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i+1][j][0]==' ') {
-						chessBoard[i+1][j][2]='*';
-						is_path=1;
-					}
-				}
-				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i+1][j][0]=='w') {
 						chessBoard[i+1][j][2]='*';
 						is_path=1;
 					}
@@ -828,13 +746,6 @@ public class Board {
 						is_path=1;
 					}
 				}
-				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i+1][j][0]=='w') {
-						chessBoard[i+1][j][2]='*';
-						is_path=1;
-					}
-				}
 				if((i+1>=1) && (i+1<=8) && (j+1>=1) && (j+1<=8)) {
 					if(chessBoard[i+1][j+1][0]=='w') {
 						chessBoard[i+1][j+1][2]='*';
@@ -852,13 +763,6 @@ public class Board {
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i+1][j][0]==' ') {
-						chessBoard[i+1][j][2]='*';
-						is_path=1;
-					}
-				}
-				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i+1][j][0]=='w') {
 						chessBoard[i+1][j][2]='*';
 						is_path=1;
 					}
@@ -884,13 +788,6 @@ public class Board {
 						is_path=1;
 					}
 				}
-				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i+1][j][0]=='w') {
-						chessBoard[i+1][j][2]='*';
-						is_path=1;
-					}
-				}
 				if((i+1>=1) && (i+1<=8) && (j+1>=1) && (j+1<=8)) {
 					if(chessBoard[i+1][j+1][0]=='w') {
 						chessBoard[i+1][j+1][2]='*';
@@ -908,13 +805,6 @@ public class Board {
 				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
 					//바로 앞에 nothing
 					if(chessBoard[i+1][j][0]==' ') {
-						chessBoard[i+1][j][2]='*';
-						is_path=1;
-					}
-				}
-				if((i+1>=1) && (i+1<=8) && (j>=1) && (j<=8)) {
-					//바로 앞에 enemy(black)
-					if(chessBoard[i+1][j][0]=='w') {
 						chessBoard[i+1][j][2]='*';
 						is_path=1;
 					}
@@ -938,7 +828,7 @@ public class Board {
 	void moveKing(char c, int i, int j) {
 		if(c=='w') {
 			if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
-				if((chessBoard[i-1][j][0]==' ' || chessBoard[i-1][j][1]=='b')) { //up
+				if((chessBoard[i-1][j][0]==' ' || chessBoard[i-1][j][0]=='b')) { //up
 					chessBoard[i-1][j][2]='*';
 					is_path=1;
 				}
@@ -967,7 +857,7 @@ public class Board {
 			if((i-1>=1) && (i-1<=8) && (j-1>=1) && (j-1<=8)) {
 				//left up
 				if(chessBoard[i-1][j-1][0]==' ' || chessBoard[i-1][j-1][0]=='b') {
-					chessBoard[i][j-1][2]='*';
+					chessBoard[i-1][j-1][2]='*';
 					is_path=1;
 				}
 			}
@@ -995,7 +885,7 @@ public class Board {
 		}else if(c=='b') {
 			if((i-1>=1) && (i-1<=8) && (j>=1) && (j<=8)) {
 				//up
-				if(chessBoard[i-1][j][0]==' ' || chessBoard[i-1][j][1]=='w') {
+				if(chessBoard[i-1][j][0]==' ' || chessBoard[i-1][j][0]=='w') {
 					chessBoard[i-1][j][2]='*';
 					is_path=1;
 				}
@@ -1439,7 +1329,7 @@ public class Board {
 			in_key=1;
 			Inputs = new HashMap<Integer, String>();
 			try {
-				fis = new FileInputStream("./input1.txt");
+				fis = new FileInputStream("./input3.txt");
 				isr = new InputStreamReader(fis);
 				br = new BufferedReader(isr);
 				//File Output Stream
@@ -2038,26 +1928,38 @@ public class Board {
 		
 		if(withFile==true) {
 			try {
+
 				for(int i=0;i<9;i++) {
 					for(int j=0;j<9;j++) {
-						for(int k=0;k<3;k++) {
-							//System.out.print(chessBoard[i][j][k]);
-							if(i==0) {
-								bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
+						if(i==0 && j!=0) {
+							for(int k=0;k<3;k++) {
+								bw.write(chessBoard[i][j][k]);
 								bw.flush();
-							}else if(j==0) {
-								if(k==0)
-									continue;
-								bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
+							}
+						}else if(j==0) {
+							for(int k=1;k<3;k++) {
+								bw.write(chessBoard[i][j][k]);
 								bw.flush();
-							}else if((i%2==1 && j%2==1) || (i%2==0 && j%2==0)) {
-									//odd odd or even even
-									bw.write(ANSI_BG_WHITE + ANSI_FG_BLACK+chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
-									bw.flush();
-								}else if((i%2==1 && j%2==0) || (i%2==0 && j%2==1)) {
-									bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
-									bw.flush();
-								}
+							}
+						}else if(j!=0 &&((i%2==1 && j%2==1) || (i%2==0 && j%2==0))) {
+							//odd odd or even even
+							bw.write(ANSI_BG_WHITE + ANSI_FG_BLACK);
+							bw.flush();
+							for(int k=0;k<3;k++) {
+								bw.write(chessBoard[i][j][k]);
+								bw.flush();
+							}
+							bw.write(ANSI_RESET + ANSI_RESET);
+							bw.flush();
+						}else if(j!=0 &&((i%2==1 && j%2==0) || (i%2==0 && j%2==1))) {
+							bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE);
+							bw.flush();
+							for(int k=0;k<3;k++) {
+								bw.write(chessBoard[i][j][k]);
+								bw.flush();
+							}
+							bw.write(ANSI_RESET + ANSI_RESET);
+							bw.flush();
 						}
 					}
 					bw.write("\n");
@@ -3102,22 +3004,35 @@ public class Board {
 			try {
 				for(int i=0;i<9;i++) {
 					for(int j=0;j<9;j++) {
-						for(int k=0;k<3;k++) {
-							//System.out.print(chessBoard[i][j][k]);
-								if(i==0) {
-									bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
-									bw.flush();
-								}else if(i!=0 && j==0) {
-									bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
-									bw.flush();
-								}else if((i%2==1 && j%2==1) || (i%2==0 && j%2==0)) {
-									//odd odd or even even
-									bw.write(ANSI_BG_WHITE + ANSI_FG_BLACK+chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
-									bw.flush();
-								}else if((i%2==1 && j%2==0) || (i%2==0 && j%2==1)) {
-									bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
-									bw.flush();
-								}
+						if(i==0 && j!=0) {
+							for(int k=0;k<3;k++) {
+								bw.write(chessBoard[i][j][k]);
+								bw.flush();
+							}
+						}else if(j==0) {
+							for(int k=1;k<3;k++) {
+								bw.write(chessBoard[i][j][k]);
+								bw.flush();
+							}
+						}else if(j!=0 &&((i%2==1 && j%2==1) || (i%2==0 && j%2==0))) {
+							//odd odd or even even
+							bw.write(ANSI_BG_WHITE + ANSI_FG_BLACK);
+							bw.flush();
+							for(int k=0;k<3;k++) {
+								bw.write(chessBoard[i][j][k]);
+								bw.flush();
+							}
+							bw.write(ANSI_RESET + ANSI_RESET);
+							bw.flush();
+						}else if(j!=0 &&((i%2==1 && j%2==0) || (i%2==0 && j%2==1))) {
+							bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE);
+							bw.flush();
+							for(int k=0;k<3;k++) {
+								bw.write(chessBoard[i][j][k]);
+								bw.flush();
+							}
+							bw.write(ANSI_RESET + ANSI_RESET);
+							bw.flush();
 						}
 					}
 					bw.write("\n");
