@@ -3108,8 +3108,6 @@ public class Board {
 									bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
 									bw.flush();
 								}else if(i!=0 && j==0) {
-									if(k==0)
-										k++;
 									bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
 									bw.flush();
 								}else if((i%2==1 && j%2==1) || (i%2==0 && j%2==0)) {
