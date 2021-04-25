@@ -1329,11 +1329,11 @@ public class Board {
 			in_key=1;
 			Inputs = new HashMap<Integer, String>();
 			try {
-				fis = new FileInputStream("./input3.txt");
+				fis = new FileInputStream("./Input.txt");
 				isr = new InputStreamReader(fis);
 				br = new BufferedReader(isr);
 				//File Output Stream
-				fos = new FileOutputStream("./outputt.txt");
+				fos = new FileOutputStream("./Output.txt");
 				osw = new OutputStreamWriter(fos);
 				bw = new BufferedWriter(osw);
 				
