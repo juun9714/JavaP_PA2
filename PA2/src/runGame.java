@@ -28,9 +28,9 @@ public class runGame {
 		
 		
 		while(!game.isFinish(withFile)) {
-			game.printBoard(withFile);
+			//game.printBoard(withFile);
 			game.selectObject(withFile);
-			game.moveObject(withFile);
+			//game.moveObject(withFile);
 		}
 		scan.close();
 	}
