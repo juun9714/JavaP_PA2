@@ -28,6 +28,7 @@ public class Board {
 	
 	String src;
 	String dst;
+	int s_i,s_j,d_i,d_j;
 	
 	char[][][] chessBoard;
 	int target;
@@ -1675,27 +1676,170 @@ public class Board {
 	public void selectObject(boolean withFile) {
 		/* Your code */
 		if(withFile==true) {
-			try {
-				String data;
-				int s_i,s_j,d_i,d_j;
-				while((data=br.readLine())!=null) {
-					src=data.substring(0,2);
-					dst=data.substring(4,6);
-					s_i=Character.getNumericValue(src.charAt(1));
-					s_i=9-s_i;
-					s_j=src.charAt(0)-96;
-					
-					d_i=Character.getNumericValue(dst.charAt(1));
-					d_i=9-d_i;
-					d_j=dst.charAt(0)-96;
-					
-					bw.write("src is ("+s_i+", "+s_j+")"+" and dst is ("+d_i+", "+s_j+")"+"\n");
+			while(true) {
+				try {
+					String data;
+					bw.write("Select piece: ");
 					bw.flush();
+					while((data=br.readLine())!=null) {
+						src=data.substring(0,2);
+						dst=data.substring(4,6);
+						s_i=Character.getNumericValue(src.charAt(1));
+						s_i=9-s_i;
+						s_j=src.charAt(0)-96;
+						
+						d_i=Character.getNumericValue(dst.charAt(1));
+						d_i=9-d_i;
+						d_j=dst.charAt(0)-96;
+						
+						//logic start
+						if(chessBoard[s_i][s_j][0]==' ') //nothing there
+							continue;
+						else if(s_i>8 || s_i<1 || s_j>8 || s_j<1) //out of Boundary
+							continue;
+						else if(turn==0 && chessBoard[s_i][s_j][0]=='b')
+							continue; //choose black piece on white turn 
+						else if(turn==1 && chessBoard[s_i][s_j][0]=='w')
+							continue; //choose white piece on black turn 
+						else //choose right position
+						{							
+							if(chessBoard[s_i][s_j][0]=='w') {
+								//white
+								if(chessBoard[s_i][s_j][1]=='R') {
+									//ROOK
+									if(wRooks.get(1).getX()==s_i && wRooks.get(1).getY()==s_j) {
+										target=1;
+										int p=s_i;
+										int q=s_j;
+										moveRook('w',p,q,s_i,s_j);
+									}else if(wRooks.get(2).getX()==s_i && wRooks.get(2).getY()==s_j) {
+										target=8;
+										int p=s_i;
+										int q=s_j;
+										moveRook('w',p,q,s_i,s_j);
+									}
+								}else if(chessBoard[s_i][s_j][1]=='N') {
+									//Knight
+									if(wKnights.get(1).getX()==s_i && wKnights.get(1).getY()==s_j) {
+										target=2;
+										int p=0;
+										int q=0;
+										moveKnight('w',p,q,s_i,s_j);
+									}else if(wKnights.get(2).getX()==s_i && wKnights.get(2).getY()==s_j) {
+										target=7;
+										int p=0;
+										int q=0;
+										moveKnight('w',p,q,s_i,s_j);
+									}
+								}else if(chessBoard[s_i][s_j][1]=='B') {
+									//Bishop
+									if(wBishops.get(1).getX()==s_i && wBishops.get(1).getY()==s_j) {
+										target=3;
+										int p=s_i;
+										int q=s_j;
+										moveBishop('w',p,q,s_i,s_j);
+									}else if(wBishops.get(2).getX()==s_i && wBishops.get(2).getY()==s_j) {
+										target=6;
+										int p=s_i;
+										int q=s_j;
+										moveBishop('w',p,q,s_i,s_j);
+									}
+								}else if(chessBoard[s_i][s_j][1]=='Q') {
+									target=4;
+									int p=s_i;
+									int q=s_j;
+									moveRook('w',p,q,s_i,s_j);
+									p=s_i;
+									q=s_j;
+									moveBishop('w',p,q,s_i,s_j);
+								}else if(chessBoard[s_i][s_j][1]=='K') {
+									//King
+									target=5;
+									moveKing('w',s_i,s_j);
+								}else if(chessBoard[s_i][s_j][1]=='P') {
+									movePawn('w',s_i,s_j);
+								}
+							}else if(chessBoard[s_i][s_j][0]=='b') {
+								//black
+								if(chessBoard[s_i][s_j][1]=='R') {
+									//Rook
+									if(bRooks.get(1).getX()==s_i && bRooks.get(1).getY()==s_j) {
+										target=17;
+										int p=s_i;
+										int q=s_j;
+										moveRook('b',p,q,s_i,s_j);
+									}else if(bRooks.get(2).getX()==s_i && bRooks.get(2).getY()==s_j) {
+										target=24;
+										int p=s_i;
+										int q=s_j;
+										moveRook('b',p,q,s_i,s_j);
+									}
+								}else if(chessBoard[s_i][s_j][1]=='N') {
+									//Knight
+									if(bKnights.get(1).getX()==s_i && bKnights.get(1).getY()==s_j) {
+										target=18;
+										int p=0;
+										int q=0;
+										moveKnight('b',p,q,s_i,s_j);
+									}else if(bKnights.get(2).getX()==s_i && bKnights.get(2).getY()==s_j) {
+										target=23;
+										int p=0;
+										int q=0;
+										moveKnight('b',p,q,s_i,s_j);
+									}
+								}else if(chessBoard[s_i][s_j][1]=='B') {
+									//Bishop
+									if(bBishops.get(1).getX()==s_i && bBishops.get(1).getY()==s_j) {
+										target=19;
+										int p=s_i;
+										int q=s_j;
+										moveBishop('b',p,q,s_i,s_j);
+									}else if(bBishops.get(2).getX()==s_i && bBishops.get(2).getY()==s_j) {
+										target=22;
+										int p=s_i;
+										int q=s_j;
+										moveBishop('b',p,q,s_i,s_j);
+									}
+								}else if(chessBoard[s_i][s_j][1]=='Q') {
+									//Queen
+									target=20;
+									int p=s_i;
+									int q=s_j;
+									moveRook('b',p,q,s_i,s_j);
+									p=s_i;
+									q=s_j;
+									moveBishop('b',p,q,s_i,s_j);
+								}else if(chessBoard[s_i][s_j][1]=='K') {
+									//King
+									target=21;
+									moveKing('b',s_i,s_j);
+								}else if(chessBoard[s_i][s_j][1]=='P') {
+									//Pawn
+									movePawn('b',s_i,s_j);
+								}
+							}
+							if(is_path==0)
+								continue;
+							else if(is_path==1) {
+								if(turn==0)
+									turn=1;
+								else if(turn==1)
+									turn=0;
+								
+								break;
+							}
+						}
+						
+						//logic done
+						
+						
+						//bw.write("src is ("+s_i+", "+s_j+")"+" and dst is ("+d_i+", "+s_j+")"+"\n");
+						//bw.flush();
+					}
+				}catch(IOException e) {
+					e.printStackTrace();
 				}
-			}catch(IOException e) {
-				e.printStackTrace();
 			}
-			
 			
 			
 		}else if(withFile==false) {
@@ -2372,7 +2516,29 @@ public class Board {
 	public void printBoard(boolean withFile) {
 		/* Your code */
 		/* Sample print sudo code */
-		if(withFile==false) {
+		if(withFile==true) {
+			for(int i=0;i<9;i++) {
+				for(int j=0;j<9;j++) {
+					for(int k=0;k<3;k++) {
+						//System.out.print(chessBoard[i][j][k]);
+						try {
+							if(i==0 || j==0) {
+								bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
+							}else if((i%2==1 && j%2==1) || (i%2==0 && j%2==0)) {
+								//odd odd or even even
+								bw.write(ANSI_BG_WHITE + ANSI_FG_BLACK+chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
+							}else if((i%2==1 && j%2==0) || (i%2==0 && j%2==1)) {
+								bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
+							}
+						}catch(IOException e) {
+							e.printStackTrace();
+						}
+						
+					}
+				}
+				System.out.println();
+			}
+		}else if(withFile==false) {
 			for(int i=0;i<9;i++) {
 				for(int j=0;j<9;j++) {
 					for(int k=0;k<3;k++) {
