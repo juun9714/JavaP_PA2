@@ -2517,27 +2517,31 @@ public class Board {
 		/* Your code */
 		/* Sample print sudo code */
 		if(withFile==true) {
-			for(int i=0;i<9;i++) {
-				for(int j=0;j<9;j++) {
-					for(int k=0;k<3;k++) {
-						//System.out.print(chessBoard[i][j][k]);
-						try {
-							if(i==0 || j==0) {
-								bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
-							}else if((i%2==1 && j%2==1) || (i%2==0 && j%2==0)) {
-								//odd odd or even even
-								bw.write(ANSI_BG_WHITE + ANSI_FG_BLACK+chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
-							}else if((i%2==1 && j%2==0) || (i%2==0 && j%2==1)) {
-								bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
-							}
-						}catch(IOException e) {
-							e.printStackTrace();
+			try {
+				for(int i=0;i<9;i++) {
+					for(int j=0;j<9;j++) {
+						for(int k=0;k<3;k++) {
+							//System.out.print(chessBoard[i][j][k]);
+								if(i==0 || j==0) {
+									bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
+									bw.flush();
+								}else if((i%2==1 && j%2==1) || (i%2==0 && j%2==0)) {
+									//odd odd or even even
+									bw.write(ANSI_BG_WHITE + ANSI_FG_BLACK+chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
+									bw.flush();
+								}else if((i%2==1 && j%2==0) || (i%2==0 && j%2==1)) {
+									bw.write(ANSI_BG_BLACK + ANSI_FG_WHITE+ chessBoard[i][j][k]+ ANSI_RESET + ANSI_RESET);
+									bw.flush();
+								}
 						}
-						
 					}
+					bw.write("\n");
+					bw.flush();
 				}
-				System.out.println();
+			}catch(IOException e) {
+				e.printStackTrace();
 			}
+			
 		}else if(withFile==false) {
 			for(int i=0;i<9;i++) {
 				for(int j=0;j<9;j++) {

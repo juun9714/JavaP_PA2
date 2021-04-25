@@ -25,13 +25,13 @@ public class runGame {
 		}
 
 		game = new Board(withFile);
+		game.printBoard(withFile);
 		
-		
-		while(!game.isFinish(withFile)) {
-			game.printBoard(withFile);
-			game.selectObject(withFile);
+		//while(!game.isFinish(withFile)) {
+			//game.printBoard(withFile);
+			//game.selectObject(withFile);
 			//game.moveObject(withFile);
-		}
+		//}
 		scan.close();
 	}
 }
